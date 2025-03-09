@@ -1874,6 +1874,10 @@ body .sidebar {
 .sidebar .search .clear-button svg circle {
     fill: var(--search-clear-icon-color1, #808080)
 }
+.search .clear-button.show {
+    display: block;
+    align-content: center;
+}
 
 .sidebar .search .clear-button svg path {
     stroke: var(--search-clear-icon-color2, #fff)

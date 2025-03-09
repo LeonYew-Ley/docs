@@ -48,10 +48,10 @@
       repo: 'LeonYew-Ley/docs',
       loadNavbar: true,
       loadSidebar: true,
-      subMaxLevel: 4,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
+      // subMaxLevel: 2,
+      // alias: {
+      //   '/.*/_sidebar.md': '/_sidebar.md'
+      // },
       //search
       //详细配置: https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search
       search: 'auto', // 默认值
@@ -63,9 +63,11 @@
         previousText: "上一篇",
         nextText: "下一篇",
       },
-      count: {
-        countable: true,
-        language: 'chinese'
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
       },
       copyCode: {
         buttonText: '点击拷贝',
@@ -101,9 +103,9 @@
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
+  <script src="./scripts/Yew's TOC/yewstoc.js"></script>
    <script src="scripts/count/count.js"></script>
   <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
-  <script src="./scripts/Yew's TOC/yewstoc.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-bilibili@latest/bilibili.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
