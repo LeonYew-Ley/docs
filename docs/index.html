@@ -1,22 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
+
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>LeonYew's 学习笔记</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" ,shrink-to-fit=no,
+    viewport-fit=cover">
+  <meta name="description" content="">
+
+  <!-- Dosify 默认主题 -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+  <!-- 字体 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.woff2">
+
+
+  <!-- 插件样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  
+
+  <!-- Themeable: Simple (light + dark) -->
+  <!-- <link rel="stylesheet" media="(prefers-color-scheme: light)"
+    href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+  <!-- <link rel="stylesheet" media="(prefers-color-scheme: dark)"
+  href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+  <link rel="stylesheet" media="(prefers-color-scheme: light)" href="./scripts/theme-simple/theme-simple.css">
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./scripts/theme-simple/theme-simple-dark.css">
+  <style>
+    :root{
+      --theme-color: #26ac2b;
+    }
+  </style>
 </head>
+
 <body>
-  <div id="app"></div>
+  <div id="app">努力学习中...</div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      // themeable
+      readyTransition: true, // default
+      responsiveTables: true, // default
+      name: 'LeonYew\'s Doc | 黎恩瑜',
+      repo: 'LeonYew-Ley/docs',
+      loadNavbar: true,
+      loadSidebar: true,
+      subMaxLevel: 4,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      //search
+      //详细配置: https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search
+      search: 'auto', // 默认值
+      search: {
+        placeholder: '在此搜索...',
+        noData: '无数据，看来知识储备还不够！',
+      },
+      pagination: {
+        previousText: "上一篇",
+        nextText: "下一篇",
+      },
+      count: {
+        countable: true,
+        language: 'chinese'
+      },
+      copyCode: {
+        buttonText: '点击拷贝',
+        errorText: '发生错误！⚠️',
+        successText: '复制成功✅',
+      },
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6',
+        title: '本文目录',
+      },
+      timeUpdater: {
+        text: "<div align='center' style='font-size: 0.9em; margin-top:0.5rem; color: gray;'>（ 更新于: {docsify-updated} ）</div>",
+        formatUpdated: "{YYYY}/{MM}/{DD} {HH}:{mm}",
+        whereToPlace: "bottom",
+      },
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!--—————————————————————————— 渲染、基础插件 ——————————————————————————————-->
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+  <!--—————————————————————————— 美化插件 ——————————————————————————————-->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+
+  <!--—————————————————————————— 功能插件 ——————————————————————————————-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
+   <script src="scripts/count/count.js"></script>
+  <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
+  <script src="./scripts/Yew's TOC/yewstoc.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-bilibili@latest/bilibili.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <!-- 离线文档模式：sw.js -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+
 </body>
+
 </html>
