@@ -129,8 +129,6 @@ var defaultOptions = {
   
     hook.doneEach(function () {
       var nav = document.querySelectorAll('.nav')[0]
-      var t = Array.from(document.querySelectorAll('.nav'))
-  
       if (!nav) {
         return;
       }
@@ -140,7 +138,11 @@ var defaultOptions = {
       // Just unset it for now.
       if (!toc.innerHTML) {
         nav.innerHTML = null
+        nav.style.display = 'none';
         return;
+      }else {
+        // 如果有内容，确保它显示
+        nav.style.display = '';
       }
   
       // Fix me in the future
