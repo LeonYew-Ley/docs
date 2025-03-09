@@ -2348,4 +2348,8 @@ body .sidebar {
     --sidebar-nav-pagelink-background--loaded: no-repeat 0px center / 5px 6px linear-gradient(225deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4.25px), no-repeat 5px center / 5px 6px linear-gradient(135deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4.25px)
 }
 
+.page_toc {
+    color: var(--yewstoc-dark-color, #fff); /* Add dark mode color */
+}
+
 /*# sourceMappingURL=theme-simple-dark.css.map */

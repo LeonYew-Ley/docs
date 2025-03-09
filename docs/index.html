@@ -16,11 +16,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.woff2">
 
-
-  <!-- 插件样式 -->
-  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
-  
-
   <!-- Themeable: Simple (light + dark) -->
   <!-- <link rel="stylesheet" media="(prefers-color-scheme: light)"
     href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
@@ -28,9 +23,16 @@
   href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="./scripts/theme-simple/theme-simple.css">
   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./scripts/theme-simple/theme-simple-dark.css">
+  <!-- 插件样式 -->
+  <link rel="stylesheet" href="./scripts/Yew's TOC/yewstoc.css">
   <style>
-    :root{
-      --theme-color: #26ac2b;
+    :root {
+      /* temp-color 用来预览 */
+      --temp-color: hsl(123, 61%, 42%);
+      --theme-hue: 123;
+      --theme-saturation: 61%;
+      --theme-lightness: 42%;
+      --theme-color: hsl(var(--theme-hue), var(--theme-saturation), var(--theme-lightness));
     }
   </style>
 </head>
@@ -42,7 +44,7 @@
       // themeable
       readyTransition: true, // default
       responsiveTables: true, // default
-      name: 'LeonYew\'s Doc | 黎恩瑜',
+      name: 'Yew\'s Doc | 🐟',
       repo: 'LeonYew-Ley/docs',
       loadNavbar: true,
       loadSidebar: true,
