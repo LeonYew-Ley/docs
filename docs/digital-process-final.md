@@ -328,12 +328,14 @@ end
 2. **计算累积分布函数（CDF）**：根据灰度直方图，计算每个灰度级别的累积分布函数（CDF）。CDF表示小于或等于某一灰度级别的像素在图像中的累积比例。
 
 3. **映射像素值**：根据CDF，将原始图像中每个像素的灰度级别映射到一个新的灰度级别，从而实现对图像的均衡化。映射公式为：
-
+$$
    \[
    \text{new\_pixel\_value} = \text{CDF}(\text{original\_pixel\_value}) \times (\text{max\_intensity} - 1)
    \]
 
    其中，\(\text{original\_pixel\_value}\) 表示原始图像中的像素值，\(\text{CDF}\) 表示累积分布函数，\(\text{max\_intensity}\) 表示灰度级别的最大值（通常为 256）。
+
+$$
 
 ### 算法实现
 ```matlab
